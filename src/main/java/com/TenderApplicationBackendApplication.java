@@ -2,8 +2,12 @@ package com;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
 
-@SpringBootApplication(scanBasePackages = "com")
+//@SpringBootApplication(scanBasePackages = "com")
+//public class TenderApplicationBackendApplication {
+
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class TenderApplicationBackendApplication {
 
     public static void main(String[] args) {
