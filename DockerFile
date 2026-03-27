@@ -1,5 +1,7 @@
 FROM openjdk:17-jdk-slim
 
+RUN mvn clean package -DskipTests
+
 WORKDIR /app
 
 COPY target/*.jar app.jar
