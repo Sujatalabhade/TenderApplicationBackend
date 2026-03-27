@@ -7,7 +7,8 @@ import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
 //@SpringBootApplication(scanBasePackages = "com")
 //public class TenderApplicationBackendApplication {
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication(scanBasePackages = "com",
+		exclude = {DataSourceAutoConfiguration.class})
 public class TenderApplicationBackendApplication {
 
     public static void main(String[] args) {
